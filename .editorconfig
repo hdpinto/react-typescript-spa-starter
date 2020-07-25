@@ -1,0 +1,16 @@
+# Project Editor config
+[*.{js,jsx,json,ts,tsx}]
+indent_style = space
+indent_size = 2
+
+[*.{css,scss,less}]
+indent_style = space
+indent_size = 2
+
+[.{babelrc}]
+indent_style = space
+indent_size = 2
+
+[*]
+insert_final_newline = true
+end_of_line = lf
