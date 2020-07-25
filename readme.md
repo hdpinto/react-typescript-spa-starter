@@ -1,5 +1,7 @@
 # React Typescript SPA Starter
 
+A full-featured react SPA starter
+
 ## Features
 
 - Sensible ESLint Rules with prettier and typescript defaults
@@ -9,6 +11,7 @@
 - Typescript
 - Editorconfig
 - Bulma CSS
+- Tests using jest (coming soon)
 
 ## Installation
 
@@ -19,8 +22,17 @@
 
 ### Downloading
 
-#### Linux
+#### Method 1: Releases
 
+Just download and unzip into your empty project directory
+
+- v0.0.1
+  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.0.1.tar.gz)
+  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.0.1.zip)
+
+
+#### Method 2: Using git
+##### Linux
 ```bash
 cd ~/projects # or wherever you want to create your project
 mkdir my-app
@@ -32,8 +44,7 @@ rm -rf .git
 git init
 ```
 
-#### Windows
-
+##### Windows
 ```powershell
 Set-Location ~\projects # or wherever you want to create your project
 New-Item -ItemType Directory my-app
@@ -45,7 +56,7 @@ Remove-Item -Force -Recurse .git
 git init
 ```
 
-### Usage
+## Usage
 
 1. Install dependences with `npm install`
 2. Start the app with `npm run start:dev`
@@ -58,4 +69,4 @@ git init
 | `watch:dev` | Watches your code for changes and builds the bundle, no webpack dev server. Good if you have your own server |
 | `build:dev` | Builds your app once                                                                                         |
 | `build`     | Builds your app with the production flag                                                                     |
-| `test`      | Runs tests (to do)                                                                                           |
+| `test`      | Runs tests (to do)                                                                                              |
