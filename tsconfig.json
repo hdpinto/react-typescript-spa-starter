@@ -6,7 +6,7 @@
     "module": "commonjs",
     "target": "es2019",
     "jsx": "react",
-    "lib": ["dom", "ES2019"],
+    "lib": ["dom", "ES2021"],
     "types": ["jest", "core-js", "node"],
     "rootDir": "./src",
     "outDir": "./dist/",

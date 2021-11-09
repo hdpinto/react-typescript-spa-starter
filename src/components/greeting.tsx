@@ -5,7 +5,7 @@ import "./_greeting.scss";
 export const Greeting: FC = () => {
   const [name, setName] = useState("");
   return (
-    <div className="component-greeting">
+    <div data-testid="component-greeting" className="component-greeting">
       <div className="columns is-centered">
         <div className="column is-4">
           <div className="box">
