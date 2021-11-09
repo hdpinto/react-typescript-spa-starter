@@ -1,6 +1,6 @@
 {
   "name": "react-typescript-spa-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Starter project for a react/typescript SPA",
   "main": "src/index.ts",
   "scripts": {
