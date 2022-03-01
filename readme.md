@@ -11,7 +11,7 @@ A full-featured react SPA starter
 - Typescript
 - Editorconfig
 - Bulma CSS
-- Tests using jest (coming soon)
+- Tests using jest
 
 ## Installation
 
@@ -69,4 +69,4 @@ git init
 | `watch:dev` | Watches your code for changes and builds the bundle, no webpack dev server. Good if you have your own server |
 | `build:dev` | Builds your app once                                                                                         |
 | `build`     | Builds your app with the production flag                                                                     |
-| `test`      | Runs tests (to do)                                                                                              |
+| `test`      | Runs tests                                                                                                   |
