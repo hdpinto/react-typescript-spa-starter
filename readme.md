@@ -26,9 +26,9 @@ A full-featured react SPA starter
 
 Just download and unzip into your empty project directory
 
-- v0.0.1
-  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.0.1.tar.gz)
-  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.0.1.zip)
+- v0.1.1
+  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.1.1.tar.gz)
+  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.1.1.zip)
 
 
 #### Method 2: Using git
