@@ -15,6 +15,7 @@ function configFactory({ setupFiles = [], transformFile }) {
     transform: {
       "\\.(js|jsx|ts|tsx$)": transformFile,
     },
+    testEnvironment: "jsdom",
   };
 }
 
