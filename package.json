@@ -17,7 +17,9 @@
     "bundle": "webpack --mode development",
     "watch:bundle": "webpack --mode development --watch",
     "serve:bundle": "webpack serve --mode development",
-    "types": "tsc --noEmit"
+    "types": "tsc --noEmit",
+    "lint:fix": "eslint --ext .ts,.tsx ./src --fix",
+    "lint": "eslint --ext .ts,.tsx ./src"
   },
   "keywords": [
     "react",
@@ -55,11 +57,11 @@
     "core-js": "^3.6.5",
     "css-loader": "^3.6.0",
     "eslint": "^7.5.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-fetch-mock": "^3.0.3",

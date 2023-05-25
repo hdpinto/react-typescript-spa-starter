@@ -7,6 +7,7 @@ import "style/app.scss";
 const container = document.getElementById("app-mount");
 if (container) {
   const root = createRoot(container);
+
   root.render(<App />);
 }
 
