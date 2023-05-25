@@ -1,54 +1,75 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+// Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const webpack = require("webpack");
 const path = require("path");
-
-const { merge } = require("webpack-merge");
-const {
-  TsConfigPathsPlugin,
-  CheckerPlugin,
-} = require("awesome-typescript-loader");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const WebpackBar = require("webpackbar");
+const TsConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
-const rules = require("./webpack-rules");
-const modeConfig = ({ mode, outputPath }) =>
-  require(`./webpack.${mode}.config`)(outputPath)(mode);
+const isProduction = process.env.NODE_ENV === "production";
 
-const defaultOutputPath = path.resolve(__dirname, "./dist");
+const stylesHandler = MiniCssExtractPlugin.loader;
 
-module.exports = ({ mode, storybook, outputPath = defaultOutputPath }) => {
-  return merge(
-    {
-      entry: {
-        app: "./src/index.tsx",
+const config = {
+  entry: {
+    app: "./src/index.tsx",
+  },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    open: true,
+    host: "localhost",
+    static: ["webroot"],
+  },
+  plugins: [
+    new MiniCssExtractPlugin(),
+
+    // Add your plugins here
+    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(ts|tsx)$/i,
+        use: ["babel-loader", "source-map-loader"],
+        exclude: ["/node_modules/"],
       },
-      resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
-        plugins: [new TsConfigPathsPlugin()],
-      },
-      module: {
-        rules: [...rules(storybook)],
-      },
-      plugins: [
-        new CheckerPlugin(),
-        new MiniCssExtractPlugin({
-          filename: "css/[name].css",
-        }),
-        new webpack.optimize.AggressiveMergingPlugin(),
-        new WebpackBar(),
-      ],
-    },
-    modeConfig({ mode, outputPath }),
-    mode === "development"
-      ? {
-          devServer: {
-            contentBase: path.join(__dirname, "./webroot"),
-            compress: true,
-            port: 9001,
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          stylesHandler,
+          "css-loader",
+          "postcss-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: ["node_modules/bulma/sass/"],
+              },
+            },
           },
-        }
-      : {},
-    { mode }
-  );
+        ],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        type: "asset",
+      },
+
+      // Add your rules for custom modules here
+      // Learn more about loaders from https://webpack.js.org/loaders/
+    ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
+    plugins: [new TsConfigPathsPlugin()],
+  },
+};
+
+module.exports = () => {
+  if (isProduction) {
+    config.mode = "production";
+  } else {
+    config.mode = "development";
+  }
+  return config;
 };
