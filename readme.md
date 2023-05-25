@@ -26,9 +26,9 @@ A full-featured react SPA starter
 
 Just download and unzip into your empty project directory
 
-- v0.1.1
-  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.1.1.tar.gz)
-  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.1.1.zip)
+- v0.2.2
+  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.tar.gz)
+  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.zip)
 
 
 #### Method 2: Using git
@@ -63,10 +63,17 @@ git init
 
 ### Commands
 
-| command     | action                                                                                                       |
-| ----------- | ------------------------------------------------------------------------------------------------------------ |
-| `start:dev` | Starts up the webpack dev server and serves your app on http://localhost:9001, watches code and hot-reloads  |
-| `watch:dev` | Watches your code for changes and builds the bundle, no webpack dev server. Good if you have your own server |
-| `build:dev` | Builds your app once                                                                                         |
-| `build`     | Builds your app with the production flag                                                                     |
-| `test`      | Runs tests                                                                                                   |
+| command      | action                                                                                                       |
+| ------------ | ------------------------------------------------------------------------------------------------------------ |
+| `start:dev`  | Starts up the webpack dev server and serves your app on http://localhost:8080, watches code and hot-reloads  |
+| `watch:dev`  | Watches your code for changes and builds the bundle, no webpack dev server. Good if you have your own server |
+| `build:dev`  | Builds your app once                                                                                         |
+| `build`      | Builds your app with the production flag                                                                     |
+| `test`       | Runs tests                                                                                                   |
+| `watch:test` | Runs all tests and watches for changes                                                                       |
+| `types`      | Runs tsc to check types once                                                                                 |
+
+Note that `start:dev`, `watch:dev`, and `build:dev` all typecheck by default do you do not need to run it separately if you are using one of these or their aliases: `start` or `watch`.
+
+The command `build` will fail if typechecking finds a type error. This may or may not be desireable for CI. To avoid this in deployment use `build:ci` instead.
+
