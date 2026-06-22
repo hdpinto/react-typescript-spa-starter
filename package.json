@@ -19,8 +19,10 @@
   },
   "keywords": [
     "react",
-    "jest",
     "typescript",
+    "vite",
+    "vitest",
+    "tailwindcss",
     "spa",
     "starter"
   ],
