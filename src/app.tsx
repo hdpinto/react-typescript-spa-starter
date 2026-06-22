@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import React from "react";
 import { Greeting } from "components/greeting";
 
 export const App: FC = () => (

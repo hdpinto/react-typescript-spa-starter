@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Greeting: FC = () => {
   const [name, setName] = useState("");

@@ -43,6 +43,7 @@ export default tseslint.config(
       ...jsxA11y.configs.recommended.rules,
       "react-refresh/only-export-components": "warn",
       "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
       "no-console": ["error", { allow: ["warn", "error"] }],
       "no-alert": "error",
       "no-var": "error",
