@@ -130,6 +130,9 @@ typings/
 .nuxt
 dist
 
+# Migration task notes (untracked)
+tasks/
+
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
