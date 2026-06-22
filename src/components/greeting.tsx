@@ -1,4 +1,5 @@
-import React, { FC, useState } from "react";
+import type { FC } from "react";
+import React, { useState } from "react";
 
 export const Greeting: FC = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,10 @@ export const Greeting: FC = () => {
               "Please enter your name"
             )}
           </p>
-          <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="username">
+          <label
+            className="block text-sm font-medium text-gray-700 mb-1"
+            htmlFor="username"
+          >
             Name
           </label>
           <input

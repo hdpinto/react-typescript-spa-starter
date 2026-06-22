@@ -30,9 +30,10 @@ Just download and unzip into your empty project directory
   - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.tar.gz)
   - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.zip)
 
-
 #### Method 2: Using git
+
 ##### Linux
+
 ```bash
 cd ~/projects # or wherever you want to create your project
 mkdir my-app
@@ -45,6 +46,7 @@ git init
 ```
 
 ##### Windows
+
 ```powershell
 Set-Location ~\projects # or wherever you want to create your project
 New-Item -ItemType Directory my-app
@@ -76,4 +78,3 @@ git init
 Note that `start:dev`, `watch:dev`, and `build:dev` all typecheck by default do you do not need to run it separately if you are using one of these or their aliases: `start` or `watch`.
 
 The command `build` will fail if typechecking finds a type error. This may or may not be desireable for CI. To avoid this in deployment use `build:ci` instead.
-
