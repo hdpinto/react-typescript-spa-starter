@@ -1,30 +1,31 @@
 # React Typescript SPA Starter
 
-A full-featured react SPA starter
+A modern React single-page application starter.
 
 ## Features
 
-- Sensible ESLint Rules with prettier and typescript defaults
-- Sass & autoprefixer
-- Babel 7
-- Webpack & Webpack dev server
-- Typescript
-- Editorconfig
-- Bulma CSS
-- Tests using jest
+- React 19 with TypeScript
+- Vite for development and production builds
+- Vitest for testing
+- Tailwind CSS for styling
+- ESLint 9 flat config with TypeScript, React, and accessibility rules
+- Prettier for formatting
+- pnpm for package management
+- EditorConfig
 
 ## Installation
 
 ### Prerequisites
 
-- NodeJS
+- Node.js LTS
+- pnpm
 - Git
 
 ### Downloading
 
 #### Method 1: Releases
 
-Just download and unzip into your empty project directory
+Download and unzip into your empty project directory.
 
 - v0.2.2
   - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.tar.gz)
@@ -60,21 +61,24 @@ git init
 
 ## Usage
 
-1. Install dependences with `npm install`
-2. Start the app with `npm run start:dev`
+1. Install dependencies with `pnpm install`
+2. Start the app with `pnpm run dev`
+
+The dev server will open at `http://localhost:5173` by default.
 
 ### Commands
 
-| command      | action                                                                                                       |
-| ------------ | ------------------------------------------------------------------------------------------------------------ |
-| `start:dev`  | Starts up the webpack dev server and serves your app on http://localhost:8080, watches code and hot-reloads  |
-| `watch:dev`  | Watches your code for changes and builds the bundle, no webpack dev server. Good if you have your own server |
-| `build:dev`  | Builds your app once                                                                                         |
-| `build`      | Builds your app with the production flag                                                                     |
-| `test`       | Runs tests                                                                                                   |
-| `watch:test` | Runs all tests and watches for changes                                                                       |
-| `types`      | Runs tsc to check types once                                                                                 |
+| command         | action                                                 |
+| --------------- | ------------------------------------------------------ |
+| `dev` / `start` | Starts the Vite dev server with hot module replacement |
+| `build`         | Type-checks and builds the app for production          |
+| `preview`       | Serves the production build locally                    |
+| `test`          | Runs the test suite once                               |
+| `test:watch`    | Runs the test suite in watch mode                      |
+| `types`         | Runs TypeScript type-checking once                     |
+| `lint`          | Runs ESLint                                            |
+| `lint:fix`      | Runs ESLint and fixes auto-fixable issues              |
+| `format`        | Formats files with Prettier                            |
+| `format:check`  | Checks that files are formatted with Prettier          |
 
-Note that `start:dev`, `watch:dev`, and `build:dev` all typecheck by default do you do not need to run it separately if you are using one of these or their aliases: `start` or `watch`.
-
-The command `build` will fail if typechecking finds a type error. This may or may not be desireable for CI. To avoid this in deployment use `build:ci` instead.
+The `build` command runs type-checking first, so it will fail if any TypeScript errors are present. This is useful for CI.
