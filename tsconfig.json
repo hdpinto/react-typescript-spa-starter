@@ -6,7 +6,6 @@
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["vitest/globals", "node"],
-    "baseUrl": ".",
     "paths": {
       "app": ["./src/app.tsx"],
       "components/*": ["./src/components/*"],

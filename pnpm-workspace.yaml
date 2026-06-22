@@ -1,4 +1,6 @@
 allowBuilds:
   "@parcel/watcher": true
-  core-js: true
-  node-sass: true
+
+peerDependencyRules:
+  allowedVersions:
+    eslint: "10"
