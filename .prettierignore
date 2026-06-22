@@ -3,3 +3,4 @@ pnpm-workspace.yaml
 dist
 node_modules
 coverage
+src/routeTree.gen.ts

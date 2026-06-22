@@ -6,6 +6,8 @@ A modern React single-page application starter.
 
 - React 19 with TypeScript 6
 - Vite for development and production builds
+- TanStack Router with file-based routing
+- Optional static site generation via TanStack Start (disabled by default)
 - Vitest for testing
 - Tailwind CSS for styling
 - ESLint 10 flat config with TypeScript, React, and accessibility rules
@@ -82,3 +84,30 @@ The dev server will open at `http://localhost:5173` by default.
 | `format:check`  | Checks that files are formatted with Prettier          |
 
 The `build` command runs type-checking first, so it will fail if any TypeScript errors are present. This is useful for CI.
+
+## Routing
+
+Routes are defined with [TanStack Router](https://tanstack.com/router) file-based routing. Add route files under `src/routes/`:
+
+- `src/routes/__root.tsx` — root layout
+- `src/routes/index.tsx` — home page (`/`)
+- `src/routes/about.tsx` — about page (`/about`)
+
+The route tree is generated automatically at `src/routeTree.gen.ts`.
+
+## Static Site Generation
+
+Static prerendering is disabled by default because this is a boilerplate. To generate a static site, set `prerender.enabled` to `true` in `vite.config.ts`:
+
+```ts
+tanstackStart({
+  prerender: {
+    enabled: true,
+    crawlLinks: true,
+    autoStaticPathsDiscovery: true,
+    autoSubfolderIndex: true,
+  },
+});
+```
+
+Then run `pnpm run build`. The static output will be in `dist/client/` and can be deployed to any static host.

@@ -13,7 +13,7 @@ const jsxA11yPlugin = fixupPluginRules(jsxA11y);
 
 export default tseslint.config(
   {
-    ignores: ["dist", "node_modules", "coverage"],
+    ignores: ["dist", "node_modules", "coverage", "src/routeTree.gen.ts"],
   },
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
@@ -46,7 +46,10 @@ export default tseslint.config(
       ...reactPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
       ...jsxA11yPlugin.configs.recommended.rules,
-      "react-refresh/only-export-components": "warn",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowExportNames: ["Route"] },
+      ],
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "no-console": ["error", { allow: ["warn", "error"] }],
@@ -66,5 +69,11 @@ export default tseslint.config(
   {
     files: ["**/*.mjs", "**/*.cjs", "**/*.config.ts"],
     ...tseslint.configs.disableTypeChecked,
+  },
+  {
+    files: ["src/routes/**"],
+    rules: {
+      "react-refresh/only-export-components": "off",
+    },
   }
 );
