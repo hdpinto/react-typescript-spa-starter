@@ -4,11 +4,11 @@ A modern React single-page application starter.
 
 ## Features
 
-- React 19 with TypeScript
+- React 19 with TypeScript 6
 - Vite for development and production builds
 - Vitest for testing
 - Tailwind CSS for styling
-- ESLint 9 flat config with TypeScript, React, and accessibility rules
+- ESLint 10 flat config with TypeScript, React, and accessibility rules
 - Prettier for formatting
 - pnpm for package management
 - EditorConfig
