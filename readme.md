@@ -33,6 +33,18 @@ Download and unzip into your empty project directory.
   - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.3.0.tar.gz)
   - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.3.0.zip)
 
+##### macOS
+
+```bash
+curl -L https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.3.0.tar.gz | tar -xz --strip-components=1
+```
+
+##### Linux
+
+```bash
+wget -O - https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.3.0.tar.gz | tar -xz --strip-components=1
+```
+
 #### Method 2: Using git
 
 ##### Linux
