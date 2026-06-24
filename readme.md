@@ -29,9 +29,9 @@ A modern React single-page application starter.
 
 Download and unzip into your empty project directory.
 
-- v0.2.2
-  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.tar.gz)
-  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.2.2.zip)
+- v0.3.0
+  - [tar.gz](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.3.0.tar.gz)
+  - [zip](https://github.com/hdpinto/react-typescript-spa-starter/archive/v0.3.0.zip)
 
 #### Method 2: Using git
 
